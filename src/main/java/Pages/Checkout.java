@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class Checkout {
 
@@ -33,5 +34,10 @@ public class Checkout {
 
     public void confirmOrder() {
         ConfirmOrder.click();
+    }
+
+    // Assertion
+    public void verifyCheckoutVisible() {
+        Assert.assertTrue(ContinueBilling.isDisplayed(), "Checkout is visible");
     }
 }

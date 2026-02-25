@@ -1,10 +1,10 @@
-
 package Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class Contact {
 
@@ -40,10 +40,8 @@ public class Contact {
     public void enterDetails(String uname, String uemail, String msg) {
         name.clear();
         name.sendKeys(uname);
-
         email.clear();
         email.sendKeys(uemail);
-
         enquiry.clear();
         enquiry.sendKeys(msg);
     }
@@ -52,7 +50,8 @@ public class Contact {
         submitBtn.click();
     }
 
-    public String getSuccessMessage() {
-        return successMsg.getText();
+    // Assertion
+    public void verifyContactSubmitted() {
+        Assert.assertTrue(successMsg.isDisplayed(), "Contact success message is visible");
     }
 }

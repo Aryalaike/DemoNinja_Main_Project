@@ -8,8 +8,8 @@
           <include name="getResult"/>
           <include name="setup"/>
           <include name="checkoutTest"/>
-          <include name="tearDown"/>
           <include name="setupReport"/>
+          <include name="tearDown"/>
           <include name="openUrl"/>
         </methods>
       </class> <!-- Test.Test -->

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class Login {
 
@@ -29,14 +30,13 @@ public class Login {
     public void login(String userEmail, String userPassword) {
         email.clear();
         email.sendKeys(userEmail);
-
         password.clear();
         password.sendKeys(userPassword);
-
         loginBtn.click();
     }
 
-    public String getAccountText() {
-        return accountText.getText();
+    // Assertion
+    public void verifyLoginDone() {
+        Assert.assertTrue(accountText.isDisplayed(), "Account page is visible");
     }
 }

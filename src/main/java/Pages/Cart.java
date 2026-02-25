@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class Cart {
 
@@ -17,6 +18,9 @@ public class Cart {
 
     @FindBy(xpath="//a[text()='Checkout']")
     WebElement Checkout;
+
+    @FindBy(xpath = "//a[text()='Continue']")
+    WebElement continueShopping;
 
     public Cart(WebDriver driver) {
         this.driver = driver;
@@ -32,12 +36,12 @@ public class Cart {
         Checkout.click();
     }
 
-	public void Continue_Shopping() {
-		WebElement Continue_Shopping = null;
-		// TODO Auto-generated method stub
-		Continue_Shopping.click();
-	}
+    public void Continue_Shopping() {
+        continueShopping.click();
+    }
 
-		
-	}
-
+    // Assertion
+    public void verifyCartOpened() {
+        Assert.assertTrue(CartButton.isDisplayed(), "Cart is visible");
+    }
+}

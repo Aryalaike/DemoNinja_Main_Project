@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 17 20:50:23 IST 2026</td>
+<td>Started on:</td><td>Wed Feb 25 12:04:07 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>50 seconds (50749 ms)</td>
+<tr><td>Total time:</td><td>48 seconds (48818 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,15 +77,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='Test.Test.checkoutTest()'><b>checkoutTest</b><br>Test class: Test.Test</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[text()=&apos;View Cart&apos;]&quot;}
-  (Session info: chrome=144.0.7559.133)
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@value=&apos;Continue&apos;]&quot;}
+  (Session info: chrome=145.0.7632.111)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [089072596d4a3b3216d915aae00d85b6, findElement {using=xpath, value=//strong[text()=&apos;View Cart&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\al589\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51165}, goog:processID: 25668, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51165/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 089072596d4a3b3216d915aae00d85b6
+Command: [ef2c135a5e346b2d90cb9218579e524d, findElement {value=//input[@value=&apos;Continue&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.111, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\al589\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51192}, goog:processID: 9476, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51192/devtoo..., se:cdpVersion: 145.0.7632.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef2c135a5e346b2d90cb9218579e524d
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -100,8 +100,8 @@ Session ID: 089072596d4a3b3216d915aae00d85b6
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
-	at Pages.Cart.openCart(Cart.java:28)
-	at Test.Test.checkoutTest(Test.java:90)
+	at Pages.Checkout.continueBilling(Checkout.java:28)
+	at Test.Test.checkoutTest(Test.java:73)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -128,16 +128,16 @@ Session ID: 089072596d4a3b3216d915aae00d85b6
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1091736037", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1091736037'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//strong[text()=&apos;View Cart&apos;]&quot;}
-  (Session info: chrome=144.0.7559.133)
+</pre></div><a href='#' onClick='toggleBox("stack-trace516413619", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace516413619'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@value=&apos;Continue&apos;]&quot;}
+  (Session info: chrome=145.0.7632.111)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [089072596d4a3b3216d915aae00d85b6, findElement {using=xpath, value=//strong[text()=&apos;View Cart&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\al589\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51165}, goog:processID: 25668, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51165/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 089072596d4a3b3216d915aae00d85b6
+Command: [ef2c135a5e346b2d90cb9218579e524d, findElement {value=//input[@value=&apos;Continue&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.111, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\al589\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51192}, goog:processID: 9476, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51192/devtoo..., se:cdpVersion: 145.0.7632.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ef2c135a5e346b2d90cb9218579e524d
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -152,8 +152,8 @@ Session ID: 089072596d4a3b3216d915aae00d85b6
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
-	at Pages.Cart.openCart(Cart.java:28)
-	at Test.Test.checkoutTest(Test.java:90)
+	at Pages.Checkout.continueBilling(Checkout.java:28)
+	at Test.Test.checkoutTest(Test.java:73)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -181,7 +181,7 @@ Session ID: 089072596d4a3b3216d915aae00d85b6
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>9</td>
+<td>12</td>
 <td>Test.Test@3b0090a4</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -193,29 +193,29 @@ Session ID: 089072596d4a3b3216d915aae00d85b6
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='Test.Test.registerTest()'><b>registerTest</b><br>Test class: Test.Test</td>
+<td></td>
+<td>7</td>
+<td>Test.Test@3b0090a4</td></tr>
+<tr>
 <td title='Test.Test.logout()'><b>logout</b><br>Test class: Test.Test</td>
 <td></td>
 <td>2</td>
 <td>Test.Test@3b0090a4</td></tr>
 <tr>
-<td title='Test.Test.registerTest()'><b>registerTest</b><br>Test class: Test.Test</td>
+<td title='Test.Test.loginTest()'><b>loginTest</b><br>Test class: Test.Test</td>
 <td></td>
-<td>6</td>
-<td>Test.Test@3b0090a4</td></tr>
-<tr>
-<td title='Test.Test.contactTest()'><b>contactTest</b><br>Test class: Test.Test</td>
-<td></td>
-<td>5</td>
+<td>2</td>
 <td>Test.Test@3b0090a4</td></tr>
 <tr>
 <td title='Test.Test.wishlistTest()'><b>wishlistTest</b><br>Test class: Test.Test</td>
 <td></td>
-<td>10</td>
+<td>7</td>
 <td>Test.Test@3b0090a4</td></tr>
 <tr>
-<td title='Test.Test.loginTest()'><b>loginTest</b><br>Test class: Test.Test</td>
+<td title='Test.Test.contactTest()'><b>contactTest</b><br>Test class: Test.Test</td>
 <td></td>
-<td>4</td>
+<td>3</td>
 <td>Test.Test@3b0090a4</td></tr>
 </table><p>
 </body>

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class Home {
 
@@ -27,9 +28,6 @@ public class Home {
     @FindBy(xpath = "//button[@class='btn btn-default btn-lg']")
     WebElement searchBtn;
 
-    @FindBy(xpath = "//h1[contains(text(),'Account Logout')]")
-    WebElement logoutMsg;
-
     public Home(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -52,18 +50,14 @@ public class Home {
         logout.click();
     }
 
-    public String getLogoutMessage() {
-        return logoutMsg.getText();
-    }
-
     public void searchProduct(String product) {
         searchBox.clear();
         searchBox.sendKeys(product);
         searchBtn.click();
     }
 
-	public boolean isLoginLinkDisplayed() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+    // Assertion
+    public void verifyLoginVisible() {
+        Assert.assertTrue(login.isDisplayed(), "Login link is visible");
+    }
 }

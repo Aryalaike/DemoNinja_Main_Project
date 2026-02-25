@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class Register {
 
@@ -53,5 +54,10 @@ public class Register {
 
     public void clickContinue() {
         ContinueBtn.click();
+    }
+
+    // Assertion
+    public void verifyRegisterSuccess() {
+        Assert.assertTrue(ContinueBtn.isDisplayed(), "Register page is visible");
     }
 }

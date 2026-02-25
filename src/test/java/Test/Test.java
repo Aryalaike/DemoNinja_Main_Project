@@ -1,6 +1,5 @@
 package Test;
 
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -8,30 +7,11 @@ import Base.Base;
 import Pages.*;
 
 import com.aventstack.extentreports.*;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Test extends Base {
 
-    ExtentReports extent;
     ExtentTest test;
 
-    @BeforeSuite
-    public void setupReport() {
-
-        ExtentSparkReporter reporter =
-                new ExtentSparkReporter("./Reports/Report.html");
-
-        reporter.config().setDocumentTitle("Automation Report");
-        reporter.config().setReportName("TutorialsNinja Testing");
-        reporter.config().setTheme(Theme.DARK); 
-
-        extent = new ExtentReports();
-        extent.attachReporter(reporter);
-
-        extent.setSystemInfo("Tester", "Arya");
-        extent.setSystemInfo("Browser", "Chrome");
-    }
 
     @org.testng.annotations.Test(priority = 0)
     public void registerTest() throws InterruptedException {
@@ -48,10 +28,7 @@ public class Test extends Base {
         r.clickContinue();
 
         Thread.sleep(2000);
-       // Assert.assertTrue(driver.getCurrentUrl().contains("success"), "Registration failed");
-       // test.pass("Register Test completed successfully");
     }
-    
 
 
     @org.testng.annotations.Test(priority = 1)
@@ -64,8 +41,8 @@ public class Test extends Base {
 
         Product p = new Product(driver);
         p.selectSamsung();
-        Thread.sleep(2000);
 
+        Thread.sleep(2000);
         p.addToWishlist();
         Thread.sleep(2000);
     }
@@ -81,8 +58,8 @@ public class Test extends Base {
 
         Product p = new Product(driver);
         p.macbook();
-        Thread.sleep(2000);
 
+        Thread.sleep(2000);
         p.addToCart();
         Thread.sleep(2000);
 
@@ -114,8 +91,8 @@ public class Test extends Base {
 
         c.enterDetails(
                 "Arya",
-                "arya" + System.currentTimeMillis() + "@mail.com",
-                "This is automation test enquiry"
+                "arya@mail.com",
+                "Palakkunnel"
         );
 
         c.clickSubmit();
@@ -129,8 +106,6 @@ public class Test extends Base {
 
         Home h = new Home(driver);
         h.logout();
-      //  Assert.assertTrue(h.isLoginLinkDisplayed(), "Logout failed");
-       // test.pass("Logout Test completed successfully");
     }
 
 
@@ -145,12 +120,11 @@ public class Test extends Base {
         h.clickLogin();
 
         Login l = new Login(driver);
-
         l.login("arya@mail.com", "12345");
     }
 
 
-    @org.testng.annotations.AfterMethod
+    @AfterMethod
     public void getResult(ITestResult result) {
 
         if (result.getStatus() == ITestResult.FAILURE) {
@@ -168,10 +142,4 @@ public class Test extends Base {
         }
     }
 
-
-    @AfterSuite
-    public void tearDown() {
-
-        extent.flush();
-    }
 }
